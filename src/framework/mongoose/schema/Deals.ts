@@ -1,9 +1,9 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-type Order = Document & {};
+type Deals = Document & {};
 
-const OrderSchema = new Schema({
+const DealsSchema = new Schema({
   date: {
     type: Date,
     unique: true,
@@ -15,4 +15,4 @@ const OrderSchema = new Schema({
   },
 });
 
-export default mongoose.model<Order>('Order', OrderSchema);
+export default mongoose.model<Deals>('Deals', DealsSchema);
