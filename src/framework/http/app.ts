@@ -1,6 +1,7 @@
 import express, { json, NextFunction, Request, Response } from 'express';
 
 import AppError from './errors/AppError';
+import '../mongoose/connection';
 
 const app = express();
 
