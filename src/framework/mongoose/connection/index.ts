@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 mongoose
-  .connect('mongodb://localhost/B2W_StarWars', {
+  .connect('mongodb://localhost/LinkAPI', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
