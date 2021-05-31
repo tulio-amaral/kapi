@@ -8,7 +8,7 @@ type IResponse = {
 };
 
 class GroupDealByDayUseCase {
-  async execute() {
+  async execute(): Promise<void> {
     const groupByDay = await Deal.aggregate([
       {
         $group: {
@@ -31,8 +31,6 @@ class GroupDealByDayUseCase {
 
       await Group.create({ date, total: dealsByDay.total });
     });
-
-    return groupByDay;
   }
 }
 

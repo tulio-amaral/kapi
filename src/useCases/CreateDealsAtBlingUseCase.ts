@@ -1,15 +1,15 @@
 import axios from 'axios';
-import { ICreateDealsDTO } from 'dtos/ICreateDealsDTO';
 
 import Deal from '../framework/mongoose/schema/Deal';
 
+type IRequest = {
+  sequence: number;
+  name: string;
+  value: number;
+};
+
 class CreateDealsAtBlingUseCase {
-  async execute({
-    sequence,
-    name,
-    value,
-    date,
-  }: ICreateDealsDTO): Promise<void> {
+  async execute({ sequence, name, value }: IRequest): Promise<void> {
     const recordAlreadyExists = await Deal.findOne({ sequence });
 
     if (recordAlreadyExists) {
