@@ -1,14 +1,22 @@
-import axios from 'axios';
 import express, { json, NextFunction, Request, Response } from 'express';
 import 'dotenv/config';
 
 import AppError from './errors/AppError';
-
+import router from './routes';
 import '../mongoose/connection';
 
 const app = express();
 
+// mongoose
+//   .connect('mongodb://localhost/LinkAPI', {
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log('DB connected'));
+
 app.use(json());
+app.use(router);
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {
