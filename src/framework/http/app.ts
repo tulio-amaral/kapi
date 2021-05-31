@@ -7,14 +7,6 @@ import '../mongoose/connection';
 
 const app = express();
 
-// mongoose
-//   .connect('mongodb://localhost/LinkAPI', {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => console.log('DB connected'));
-
 app.use(json());
 app.use(router);
 
