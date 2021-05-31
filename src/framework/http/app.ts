@@ -1,6 +1,9 @@
+import axios from 'axios';
 import express, { json, NextFunction, Request, Response } from 'express';
+import 'dotenv/config';
 
 import AppError from './errors/AppError';
+
 import '../mongoose/connection';
 
 const app = express();
