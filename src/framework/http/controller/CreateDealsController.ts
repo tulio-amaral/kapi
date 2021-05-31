@@ -8,9 +8,9 @@ class CreateDealsController {
     const listDealsAtPipedriveUseCase = new ListDealsAtPipedriveUseCase();
     const createDealsUseCase = new CreateDealsUseCase();
 
-    const listDeals = listDealsAtPipedriveUseCase.execute();
+    const listDeals = await listDealsAtPipedriveUseCase.execute();
 
-    const deals = (await listDeals).map(deal => {
+    listDeals.map(deal => {
       return createDealsUseCase.execute({
         date: deal.date,
         name: deal.name,
@@ -19,7 +19,7 @@ class CreateDealsController {
       });
     });
 
-    return response.status(201).json(deals);
+    return response.status(201).send();
   }
 }
 
