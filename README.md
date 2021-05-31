@@ -18,6 +18,13 @@
 
 ```yarn dev:server```
 
+after running this script, you should receive the following message at your console:
+
+```Server is running at port 3333```</br>
+```DB connected```
+
+**if so, you are good to go!🏃‍♂️🏃‍♀️**
+
 # 🚩 Instructions
 
 BaseURL for this project is **http://localhost:3333**. So every request should be sent to this address.
