@@ -9,6 +9,12 @@ class CreateDealsUseCase {
     value,
     date,
   }: ICreateDealsDTO): Promise<void> {
+    const recordAlreadyExists = await Deal.findOne({ sequence });
+
+    if (recordAlreadyExists) {
+      return;
+    }
+
     await Deal.create({ sequence, name, value, date });
   }
 }
