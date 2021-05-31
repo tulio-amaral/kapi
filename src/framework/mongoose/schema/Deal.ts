@@ -9,7 +9,7 @@ const DealSchema = new Schema({
     trim: true,
     required: true,
   },
-  number: {
+  sequence: {
     type: Number,
     required: true,
   },
