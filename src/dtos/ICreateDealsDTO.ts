@@ -1,6 +1,6 @@
 export type ICreateDealsDTO = {
   name: string;
-  number: number;
+  sequence: number;
   value: number;
   date: Date;
 };

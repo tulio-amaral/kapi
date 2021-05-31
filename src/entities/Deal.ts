@@ -1,7 +1,7 @@
 class DealEntity {
   id?: number;
   name: string;
-  value: number;
+  sequence: number;
   date: Date;
 }
 
