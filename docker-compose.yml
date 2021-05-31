@@ -10,7 +10,7 @@ services:
     environment:
       - MONGODB_USERNAME=docker
       - MONGODB_PASSWORD=mongodb
-      - MONGODB_DATABASE=linkapi
+      - MONGODB_DATABASE=LinkAPI
 
     volumes:
       - mongodb_data:/bitnami/mongodb
